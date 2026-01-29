@@ -1,4 +1,4 @@
-# SQL Practice Lab
+# SQL Journey
 
 This repository is a growing collection of hands-on SQL practice databases, datasets, and query exercises.
 It is designed for learning SQL fundamentals, DBMS exam preparation, and long-term revision.
