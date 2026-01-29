@@ -1,0 +1,17 @@
+1. Create database and tables with PRIMARY KEY.
+
+2. Insert at least 10 records into each table.
+
+3. Display all patients whose Age > 40 and top 3 patients with highest bill.
+
+4. Increase bill by 10% for patients with Disease = 'Surgery'.
+
+5. Delete all patients whose bill is less than 1000.
+
+6. Use Single-row functions: display patient names in LOWER case and display length of each patient name.
+
+7. Use Group functions: find total number of patients, maximum and average bill.
+
+8. Use GROUP BY Disease: find average bill for each disease.
+
+9. Use HAVING: display only diseases whose average bill > 5000
