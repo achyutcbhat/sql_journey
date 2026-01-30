@@ -1,0 +1,19 @@
+Tasks:
+
+1. Create the database and both tables with proper PRIMARY KEY.
+
+2. Insert at least 8 records into each table.
+
+3. Display all books sorted by Price (DESC) and display only Title and Author.
+
+4. Update the price of all books in category 'CS' by adding 50.
+
+5. Delete all members from a particular city.
+
+6. Use Single-row functions: display all book titles in UPPER case and display length of each title.
+
+7. Use Group functions: find total number of books, maximum, minimum, and average price.
+
+8. Use GROUP BY: count number of books in each category.
+
+9. Use HAVING: display only categories having more than 2 books.
