@@ -27,5 +27,21 @@ for find the word start with, you should use  REGEXP '^[character you want]'; bu
 like REGEXP '[character you want]$'; 
 */
 
+/* 
+Question- 03 
+Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
+
+this questions is more better than last  two questions. we have to findout the city name which start and end with vowels.
+for that we have to do little change is 
+*/
+            SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP  '^[aeiou].*[aeiou]$';
+
+/*  here  REGEXP  '^[aeiou].*[aeiou]$'; 
+            ^ → start
+            $ → end
+            .* → anything in between 
+this is the meaning of this symbols in query 
+*/ 
+
 
 
