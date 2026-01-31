@@ -43,5 +43,22 @@ for that we have to do little change is
 this is the meaning of this symbols in query 
 */ 
 
+/* 
+Question -- 04 
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+this QNS saying that that we have to find the city which do not start with vowel. for that query is 
+*/
+            SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '^[^AEIOU]';
+
+/* CODE explanation 
+            SELECT -- it will select 
+            DISTINCT -- remove the duplicate 
+            CITY -- the name or list we have to find 
+            STATION -- from station named table 
+            REGEXP -- match the pattern 
+            ^ -- start from 
+            [^]--  ^ on the [] is  work as except or called NOT. or can understand as whichever the the character in the [], inner ^ will not going show or except that characters it will shows the answe.  
+*/
 
 
