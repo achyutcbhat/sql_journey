@@ -95,6 +95,19 @@ so the QUERY :
             WHERE NOT(CITY REGEXP '^[AEIOU]' AND CITY REGEXP '[AEIOU]$'); -- here is the main logic. 
                         == it will remove the both which start and end with vowels and give the not vowel start or end with words. 
 */
+/* 
+questions--  07
+Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name.
+If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+*/ 
+            SELECT NAME FROM STUDENTS WHERE MARKS > 75 ORDER BY RIGHT(NAME, 3), ID ASC;
 
-
+/*  code explanation == 
+             SELECT NAME : shows only the student names
+             FROM STUDENTS : takes data from the STUDENTS table
+             WHERE MARKS > 75 : selects only students who scored more than 75 marks
+             ORDER BY : is used to arrange (sort) the result
+             RIGHT(NAME, 3) : takes the last 3 letters of each name and sorts by them
+             , ID ASC : if two names end with the same 3 letters, the student with smaller ID comes first
+*/ 
 
