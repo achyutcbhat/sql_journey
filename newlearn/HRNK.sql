@@ -61,4 +61,40 @@ this QNS saying that that we have to find the city which do not start with vowel
             [^]--  ^ on the [] is  work as except or called NOT. or can understand as whichever the the character in the [], inner ^ will not going show or except that characters it will shows the answe.  
 */
 
+/* 
+01/02/2026
+Questions --05 
+Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates. 
+
+this is common like query. we have to find the words which not end with vowel. 
+*/
+            SELECT DISTINCT CITY FROM STATION WHERE CITY REGEXP '[^AEIOU]$';
+
+/* 
+MAIN SYNTAX CHANGE IS  '[^AEIOU]$'; 
+                        HERE $ list the end from. 
+*/
+
+
+/* 
+Qyestion -- 06 
+Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates. 
+
+here is main thing which we have to  understand. they asking the words either start from or end with vowel should not display'
+so the QUERY :
+*/
+            SELECT DISTINCT CITY FROM STATION WHERE NOT(CITY REGEXP '^[AEIOU]' AND CITY REGEXP '[AEIOU]$');
+
+/* 
+            QUERY EXPLANATION :- 
+            
+            SELECT → fetch data
+            DISTINCT → remove duplicate city names
+            CITY → column to display
+            Data is taken from the STATION table 
+            WHERE NOT(CITY REGEXP '^[AEIOU]' AND CITY REGEXP '[AEIOU]$'); -- here is the main logic. 
+                        == it will remove the both which start and end with vowels and give the not vowel start or end with words. 
+*/
+
+
 
