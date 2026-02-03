@@ -21,6 +21,6 @@ insert into loans values
 (5, 109, 'Business',  2500000, '2023-06-18'),
 (6, 110, 'Education', 400000,  '2023-07-05');
 
--- display the value of account and loan 
+-- display the value of tables account and loan
 select * from account;
 select * from loans;
