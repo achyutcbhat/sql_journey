@@ -134,6 +134,26 @@ AVG(col)	Finds average
 
 */ 
 
+/* 
+Questions -- 09 
+Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns. 
+
+i was learned a interesting query here 
+*/
+            select country.continent,floor(avg(city.population)) from city inner join country on city.countrycode= country.code group by continent;  
+
+/*  here the main things we have to select the continent name and average of the its city population which will rounded to nearest value 
+here we can't use round() becuase it can go up or down, like 
+                        value     round(3.99, 1) 
+                        3.99             3.9 
+
+so we will use floor() which is It rounds a number DOWN to the nearest whole number. like   value   floor() 
+                                                                                             3.99      3 
+
+*/ 
+
 
 
 
