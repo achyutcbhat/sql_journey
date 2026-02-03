@@ -111,3 +111,20 @@ If two or more students both have names ending in the same last three characters
              , ID ASC : if two names end with the same 3 letters, the student with smaller ID comes first
 */ 
 
+/* 03/02/2026 
+Questions -- 08 
+            Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Query for this code is 
+*/ 
+            SELECT sum(city.population) from city inner join country on city.countrycode = country.code where continent = 'Asia';
+
+/* here i gone a learn new thing that 'sum' . before i use the count for this , but it show error. than i got to know about sum .
+sum will  add the all attribute value and giveback. 
+*/ 
+
+
+
+
