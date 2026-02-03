@@ -1,4 +1,5 @@
 -- create the sql data base on name bankdb 
+-- use the bankdb data ;
     create database bankdb;
     use bankdb;
 
