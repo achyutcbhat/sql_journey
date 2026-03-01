@@ -175,6 +175,20 @@ Query the Euclidean Distance between points p1 and p2 and format your answer to 
 */ 
 SELECT round( (sqrt(((MAX(LAT_N)-MIN(LAT_N))*(MAX(LAT_N)-MIN(LAT_N)))+((max(LONG_W)-MIN(LONG_W))*(max(LONG_W)-MIN(LONG_W))))),4) FROM STATION ; 
 
+/* 1/03/2026
+QNS -- 
+A median is defined as a number separating the higher half of a data set from the lower half. 
+Query the median of the Northern Latitudes (LAT_N) from STATION and round your answer to 4 decimal places.
+*/
+SELECT ROUND(LAT_N, 4)
+FROM (
+    SELECT LAT_N,
+           ROW_NUMBER() OVER (ORDER BY LAT_N) AS row_num,
+           COUNT(*) OVER () AS total_rows
+    FROM STATION
+) AS temp
+WHERE row_num = FLOOR((total_rows + 1) / 2);
+
 
 
 
